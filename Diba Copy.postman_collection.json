@@ -1,0 +1,1095 @@
+{
+	"info": {
+		"_postman_id": "a2e8f1a8-8ec9-4bd6-a7ca-33ab2af06bca",
+		"name": "Diba Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2894177"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Role",
+					"item": [
+						{
+							"name": "GetAllRoles",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}roles",
+									"host": [
+										"{{URL}}roles"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "GetAllRoles",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{TOKEN}}",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{URL}}roles",
+											"host": [
+												"{{URL}}roles"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.14.2"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.0.6"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 25 Jan 2022 07:12:58 GMT"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "59"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"admin\",\n            \"permissions\": [\n                {\n                    \"id\": 3,\n                    \"title\": \"Create\"\n                },\n                {\n                    \"id\": 8,\n                    \"title\": \"CreateRole\"\n                },\n                {\n                    \"id\": 15,\n                    \"title\": \"CreateUser\"\n                },\n                {\n                    \"id\": 5,\n                    \"title\": \"Delete\"\n                },\n                {\n                    \"id\": 10,\n                    \"title\": \"DeleteRole\"\n                },\n                {\n                    \"id\": 17,\n                    \"title\": \"DeleteUser\"\n                },\n                {\n                    \"id\": 2,\n                    \"title\": \"Get\"\n                },\n                {\n                    \"id\": 11,\n                    \"title\": \"GetAllPermissions\"\n                },\n                {\n                    \"id\": 6,\n                    \"title\": \"GetAllRoles\"\n                },\n                {\n                    \"id\": 13,\n                    \"title\": \"GetAllRUser\"\n                },\n                {\n                    \"id\": 1,\n                    \"title\": \"GetAlls\"\n                },\n                {\n                    \"id\": 12,\n                    \"title\": \"GetPermission\"\n                },\n                {\n                    \"id\": 7,\n                    \"title\": \"GetRole\"\n                },\n                {\n                    \"id\": 14,\n                    \"title\": \"GetUser\"\n                },\n                {\n                    \"id\": 4,\n                    \"title\": \"Update\"\n                },\n                {\n                    \"id\": 9,\n                    \"title\": \"UpdateRole\"\n                },\n                {\n                    \"id\": 16,\n                    \"title\": \"UpdateUser\"\n                }\n            ]\n        },\n        {\n            \"id\": 2,\n            \"title\": \"partner\",\n            \"permissions\": []\n        },\n        {\n            \"id\": 5,\n            \"title\": \"test\",\n            \"permissions\": []\n        },\n        {\n            \"id\": 6,\n            \"title\": \"test1\",\n            \"permissions\": [\n                {\n                    \"id\": 2,\n                    \"title\": \"Get\"\n                },\n                {\n                    \"id\": 1,\n                    \"title\": \"GetAlls\"\n                }\n            ]\n        },\n        {\n            \"id\": 4,\n            \"title\": \"test2\",\n            \"permissions\": [\n                {\n                    \"id\": 3,\n                    \"title\": \"Create\"\n                },\n                {\n                    \"id\": 2,\n                    \"title\": \"Get\"\n                },\n                {\n                    \"id\": 1,\n                    \"title\": \"GetAlls\"\n                }\n            ]\n        },\n        {\n            \"id\": 3,\n            \"title\": \"user\",\n            \"permissions\": []\n        }\n    ],\n    \"links\": {\n        \"first\": \"http://localhost/api/roles?page=1\",\n        \"last\": \"http://localhost/api/roles?page=1\",\n        \"prev\": null,\n        \"next\": null\n    },\n    \"meta\": {\n        \"current_page\": 1,\n        \"from\": 1,\n        \"last_page\": 1,\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost/api/roles?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"path\": \"http://localhost/api/roles\",\n        \"per_page\": 10,\n        \"to\": 6,\n        \"total\": 6,\n        \"exportColumns\": [\n            \"id\",\n            \"title\"\n        ],\n        \"filters\": {\n            \"title\": \"string\",\n            \"ids\": \"array\"\n        },\n        \"orderByColumns\": [\n            \"id\",\n            \"title\"\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "GetRole",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}roles/1",
+									"host": [
+										"{{URL}}roles"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "GetRole",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{TOKEN}}",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{URL}}roles/1",
+											"host": [
+												"{{URL}}roles"
+											],
+											"path": [
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.14.2"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.0.6"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 25 Jan 2022 07:13:07 GMT"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "58"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"title\": \"admin\",\n        \"permissions\": [\n            {\n                \"id\": 1,\n                \"title\": \"GetAlls\"\n            },\n            {\n                \"id\": 2,\n                \"title\": \"Get\"\n            },\n            {\n                \"id\": 3,\n                \"title\": \"Create\"\n            },\n            {\n                \"id\": 4,\n                \"title\": \"Update\"\n            },\n            {\n                \"id\": 5,\n                \"title\": \"Delete\"\n            },\n            {\n                \"id\": 6,\n                \"title\": \"GetAllRoles\"\n            },\n            {\n                \"id\": 7,\n                \"title\": \"GetRole\"\n            },\n            {\n                \"id\": 8,\n                \"title\": \"CreateRole\"\n            },\n            {\n                \"id\": 9,\n                \"title\": \"UpdateRole\"\n            },\n            {\n                \"id\": 10,\n                \"title\": \"DeleteRole\"\n            },\n            {\n                \"id\": 11,\n                \"title\": \"GetAllPermissions\"\n            },\n            {\n                \"id\": 12,\n                \"title\": \"GetPermission\"\n            },\n            {\n                \"id\": 13,\n                \"title\": \"GetAllRUser\"\n            },\n            {\n                \"id\": 14,\n                \"title\": \"GetUser\"\n            },\n            {\n                \"id\": 15,\n                \"title\": \"CreateUser\"\n            },\n            {\n                \"id\": 16,\n                \"title\": \"UpdateUser\"\n            },\n            {\n                \"id\": 17,\n                \"title\": \"DeleteUser\"\n            }\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "CreateRole",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"test\",\n    \"permissions\": [1,2]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}roles",
+									"host": [
+										"{{URL}}roles"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "CreateRole",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{TOKEN}}",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"title\": \"test\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}roles",
+											"host": [
+												"{{URL}}roles"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.14.2"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.0.6"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 25 Jan 2022 06:53:29 GMT"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "58"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"id\": 4,\n        \"title\": \"test\",\n        \"permissions\": []\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "UpdateRole",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"test2\",\n    \"permissions\": [1,2,3]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}roles/4",
+									"host": [
+										"{{URL}}roles"
+									],
+									"path": [
+										"4"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "UpdateRole",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer {{TOKEN}}",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"title\": \"test2\",\n    \"permissions\": [1,2,3]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}roles/4",
+											"host": [
+												"{{URL}}roles"
+											],
+											"path": [
+												"4"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.14.2"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.0.6"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Tue, 25 Jan 2022 06:56:56 GMT"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "59"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"id\": 4,\n        \"title\": \"test2\",\n        \"permissions\": [\n            {\n                \"id\": 1,\n                \"title\": \"GetAlls\"\n            },\n            {\n                \"id\": 2,\n                \"title\": \"Get\"\n            },\n            {\n                \"id\": 3,\n                \"title\": \"Create\"\n            }\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "DeleteRole",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}roles/7",
+									"host": [
+										"{{URL}}roles"
+									],
+									"path": [
+										"7"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "Login",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.environment.set(\"TOKEN\",  pm.response.json()['data']['token']);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"admin@dibacapital.ir\",\n    \"password\": \"Secret123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}login",
+									"host": [
+										"{{URL}}login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Login",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"username\": \"admin@dibacapital.ir\",\n    \"password\": \"Secret123\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{URL}}login",
+											"host": [
+												"{{URL}}login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Server",
+											"value": "nginx/1.14.2"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Transfer-Encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "X-Powered-By",
+											"value": "PHP/8.1.6"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, private"
+										},
+										{
+											"key": "Date",
+											"value": "Mon, 11 Jul 2022 11:54:59 GMT"
+										},
+										{
+											"key": "X-RateLimit-Limit",
+											"value": "60"
+										},
+										{
+											"key": "X-RateLimit-Remaining",
+											"value": "59"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Methods",
+											"value": "PATCH, GET, POST, PUT, DELETE, OPTIONS"
+										},
+										{
+											"key": "Access-Control-Allow-Headers",
+											"value": "*"
+										},
+										{
+											"key": "Access-Control-Allow-Credentials",
+											"value": "true"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "SAMEORIGIN"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "1; mode=block"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiZmU0YWQyNTFmNjkzMzAwZDM0MGVkNGE3Zjk4ODQzMjgyNWMwMzBmZDQyNjliY2M2M2ZmNDI1OGIyOTRkMTlhYjI1MDY2MzRkM2M5ODJlOTUiLCJpYXQiOjE2NTc1NDA0OTkuNDkzMDkyLCJuYmYiOjE2NTc1NDA0OTkuNDkzMTAxLCJleHAiOjE2NTc1NTI0OTkuNDY4MzE5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.CtDFqA0FDBr-JQ7SzM5jPAU7ooyUFkXJS2XnDo3neW6gQQvLF8d_nuHK3Bni0k6tBvDxB7zmbqWXd5BDhtQH_ZhY1Djoxzk2B_elQfLsNEUYz44ElwaOPynbpyu_w_hICgOOv3wxglqJMekqzkOyRcNV_JtsHPz4IOQWqOFtVWLq7Y7uHwOoy5I55Lhzl51EWI7LrsghHpmxHXAl699si5T83pW6Sa6nMfAvAgYg7xcOMxdNJubhU2f7IjZDLjj-P5ZpUdMY0rW6mc9YsE3VSu_IhST3l_XKoM6_57KXtxdiMIu8-dxkPva4z_wSK9OULHLXFDtoampDL6hMSBEFNlqO4_uwhtwJMJJfpq8HhLunDnG4JlsuUj3tX9WEElSi_HIwpptpjScGPq8Bqu3zVwJIAAz8qojewkUWh7sBItSj-KtAUms0TCSrxLhzuqI6OTBGpWzBG0mxnNfvg3e8muJMNETLX0Qhm-cGKLEcPzkhdu362I6MiHKJWJri4BtDl3xkWGfCMYVg6eETMkiQCUPrpm35mm5UpUqfiSS_9QDvVVqiUdpLcLBFEJYJxHX0f8qPRBFjS5gcTEe7Cl9O_H7K8DcM1bpVKIY6aAf3qer9oVFxxiuH-BA9KKyw3phfQkslOv1LRERUzj0pwMH7nkoiuh2Mdmrh0MS39lLOMvU\",\n        \"token_id\": \"fe4ad251f693300d340ed4a7f988432825c030fd4269bcc63ff4258b294d19ab2506634d3c982e95\",\n        \"user\": {\n            \"id\": 1,\n            \"first_name\": \"Admin\",\n            \"last_name\": \"Dibal\",\n            \"gender\": \"male\",\n            \"created_at\": \"2022-07-11T11:54:13.000000Z\",\n            \"updated_at\": \"2022-07-11T11:54:13.000000Z\",\n            \"international_number\": \"624986340\",\n            \"mobile\": \"09122341292\",\n            \"phone\": null,\n            \"best_time_for_call\": null,\n            \"address\": \"\",\n            \"other_contact_way\": null,\n            \"post_code\": \"\",\n            \"last_login\": null,\n            \"is_active\": 1,\n            \"roles\": [\n                {\n                    \"id\": 1,\n                    \"title\": \"admin\",\n                    \"permissions\": [\n                        {\n                            \"id\": 3,\n                            \"title\": \"CreateFile\"\n                        },\n                        {\n                            \"id\": 6,\n                            \"title\": \"CreateUser\"\n                        },\n                        {\n                            \"id\": 8,\n                            \"title\": \"DeleteUser\"\n                        },\n                        {\n                            \"id\": 1,\n                            \"title\": \"GetAllFiles\"\n                        },\n                        {\n                            \"id\": 4,\n                            \"title\": \"GetAllUsers\"\n                        },\n                        {\n                            \"id\": 2,\n                            \"title\": \"GetFile\"\n                        },\n                        {\n                            \"id\": 5,\n                            \"title\": \"GetUser\"\n                        },\n                        {\n                            \"id\": 7,\n                            \"title\": \"UpdateUser\"\n                        }\n                    ]\n                },\n                {\n                    \"id\": 2,\n                    \"title\": \"user\",\n                    \"permissions\": []\n                }\n            ]\n        }\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Logout",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}logout",
+									"host": [
+										"{{URL}}logout"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "File",
+			"item": [
+				{
+					"name": "Upload File",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{TOKEN}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/tohid/Downloads/Diba.postman_environment.json"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{URL}}files",
+							"host": [
+								"{{URL}}files"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Upload File",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/home/tohid/Downloads/Diba.postman_environment.json"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{URL}}files",
+									"host": [
+										"{{URL}}files"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.14.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 11 Jul 2022 12:04:50 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "PATCH, GET, POST, PUT, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"user_id\": 1,\n        \"extension\": \"json\",\n        \"enabled\": true,\n        \"name\": \"Diba.postman_environment.json\",\n        \"is_public\": true,\n        \"root_file\": {\n            \"id\": 1,\n            \"size\": 473,\n            \"mime_type\": \"application/json\"\n        },\n        \"created_at\": \"2022-07-11T12:04:50.000000Z\",\n        \"updated_at\": \"2022-07-11T12:04:50.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get A File",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}files/1",
+							"host": [
+								"{{URL}}files"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get A File",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}files/1",
+									"host": [
+										"{{URL}}files"
+									],
+									"path": [
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.14.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 11 Jul 2022 12:09:54 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "PATCH, GET, POST, PUT, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"extension\": \"json\",\n        \"name\": \"Diba.postman_environment.json\",\n        \"mime_type\": \"application/json\",\n        \"size\": 473,\n        \"file\": \"ewoJImlkIjogImNkMmI4M2U5LWFlMWUtNGYwOC1hMDMwLTk5ZjBjNGI4YWExNiIsCgkibmFtZSI6ICJEaWJhIiwKCSJ2YWx1ZXMiOiBbCgkJewoJCQkia2V5IjogIlVSTCIsCgkJCSJ2YWx1ZSI6ICJsb2NhbGhvc3QiLAoJCQkidHlwZSI6ICJ0ZXh0IiwKCQkJImVuYWJsZWQiOiB0cnVlCgkJfSwKCQl7CgkJCSJrZXkiOiAiVE9LRU4iLAoJCQkidmFsdWUiOiAiIiwKCQkJInR5cGUiOiAidGV4dCIsCgkJCSJlbmFibGVkIjogdHJ1ZQoJCX0sCgkJewoJCQkia2V5IjogIiIsCgkJCSJ2YWx1ZSI6ICIiLAoJCQkidHlwZSI6ICJ0ZXh0IiwKCQkJImVuYWJsZWQiOiBmYWxzZQoJCX0KCV0sCgkiX3Bvc3RtYW5fdmFyaWFibGVfc2NvcGUiOiAiZW52aXJvbm1lbnQiLAoJIl9wb3N0bWFuX2V4cG9ydGVkX2F0IjogIjIwMjItMDctMTFUMTE6NTU6NDUuODQ1WiIsCgkiX3Bvc3RtYW5fZXhwb3J0ZWRfdXNpbmciOiAiUG9zdG1hbi85LjI0LjEiCn0=\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Files",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{URL}}files",
+							"host": [
+								"{{URL}}files"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Files",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{TOKEN}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{URL}}files",
+									"host": [
+										"{{URL}}files"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.14.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.1.6"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 11 Jul 2022 12:10:34 GMT"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "PATCH, GET, POST, PUT, DELETE, OPTIONS"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"user_id\": 1,\n            \"extension\": \"json\",\n            \"enabled\": true,\n            \"name\": \"Diba.postman_environment.json\",\n            \"is_public\": 1,\n            \"root_file\": {\n                \"id\": 1,\n                \"size\": 473,\n                \"mime_type\": \"application/json\"\n            },\n            \"created_at\": \"2022-07-11T12:04:50.000000Z\",\n            \"updated_at\": \"2022-07-11T12:04:50.000000Z\"\n        }\n    ],\n    \"links\": {\n        \"first\": \"http://localhost/api/files?page=1\",\n        \"last\": \"http://localhost/api/files?page=1\",\n        \"prev\": null,\n        \"next\": null\n    },\n    \"meta\": {\n        \"current_page\": 1,\n        \"from\": 1,\n        \"last_page\": 1,\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"active\": false\n            },\n            {\n                \"url\": \"http://localhost/api/files?page=1\",\n                \"label\": \"1\",\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"active\": false\n            }\n        ],\n        \"path\": \"http://localhost/api/files\",\n        \"per_page\": 10,\n        \"to\": 1,\n        \"total\": 1,\n        \"exportColumns\": [\n            \"root_file_id\",\n            \"name\",\n            \"extension\",\n            \"enabled\"\n        ],\n        \"filters\": {\n            \"rootFiles\": \"array\",\n            \"name\": \"string\",\n            \"extension\": \"string\",\n            \"enable\": \"boolean\",\n            \"ids\": \"array\"\n        },\n        \"orderByColumns\": []\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
