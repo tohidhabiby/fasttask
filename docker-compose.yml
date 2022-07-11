@@ -1,0 +1,106 @@
+version: '3.3'
+
+services:
+  php_diba:
+    container_name: diba_php
+    build:
+      context: ./php
+    restart: always
+    volumes:
+      - ./diba:/home/app/diba:Z
+      - ./provision.sh:/home/app/provision.sh
+      - ./startup.sh:/home/app/startup.sh
+      - ./check.sh:/home/app/check.sh
+      - ./supervisor:/etc/supervisor.d
+      - ./php/php.ini:/usr/local/etc/php/php.ini
+      - ./php/php.ini-production:/usr/local/etc/php/php.ini-production
+      - ./php/php.ini-development:/usr/local/etc/php/php.ini-development
+    links:
+      - db_diba
+      - redis_diba
+
+  nginx_diba:
+    container_name: diba_nginx
+    build:
+      context: ./nginx
+    restart: always
+    volumes:
+      - ./diba:/home/app/diba
+    links:
+      - php_diba
+    ports:
+      - 80:80
+  #    - 443:443
+
+  sqlite3:
+    container_name: diba_sqlite
+    image: nouchka/sqlite3:latest
+    restart: always
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./diba:/home/app/diba/database
+
+  db_diba:
+    image: mariadb:10.6
+    restart: always
+    container_name: diba_db
+    volumes:
+      - ./mysql/data:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=secret
+      - MYSQL_DATABASE=diba
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=secret
+    ports:
+      - 3306:3306
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: diba_phpmyadmin
+    restart: always
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=db_diba
+      - PMA_PORT=3306
+    ports:
+      - 8080:80
+    volumes:
+      - /sessions
+    links:
+      - db_diba
+
+#  db_diba:
+#    image: postgres
+#    container_name: diba_db
+#    restart: always
+#    volumes:
+#      - ./postgres/data:/var/lib/postgresql/data
+#    environment:
+#      - POSTGRESQL_PASSWORD=secret
+#      - POSTGRESQL_USER=root
+#      - POSTGRESQL_DB=diba
+#
+#  phpgadmin_diba:
+#    image: bitnami/phppgadmin
+#    container_name: diba_phppgadmin
+#    restart: always
+#    environment:
+#      - PHP_PG_ADMIN_SERVER_HOST=db_diba
+#      - PHP_PG_ADMIN_SERVER_PORT=5432
+#      - PHP_PG_ADMIN_SERVER_USER=root
+#      - PHP_PG_ADMIN_SERVER_PASSWORD=secret
+#      - PHP_PG_ADMIN_SERVER_DEFAULT_DB=diba
+#    ports:
+#      - 8080:8080
+#    links:
+#      - php_diba
+#      - db_diba
+
+  redis_diba:
+    image: redis:alpine
+    container_name: diba_redis
+
+volumes:
+  pgsqldata:
+  composer-cache:

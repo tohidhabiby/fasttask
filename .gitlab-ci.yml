@@ -1,0 +1,48 @@
+stages:
+    - test
+    - deploy_dev
+#    - deploy_prod
+
+test:
+    stage : test
+    script:
+    #    - chmod -R 777 .
+    #    - cp ~/env/env-back-testing myapp/.env.testing
+        - cp ~/env/env-back-testing myapp/.env
+    #    - rm -rf myapp/phpunit.xm
+    #    - cp ~/env/phpunit.xml myapp/phpunit.xml
+        - docker-compose -f docker-compose-test.yml down
+        - docker-compose -f docker-compose-test.yml up -d --build
+        - CURRENT_UID=$(id -u) && CURRENT_GID=$(id -g)
+        - echo $CURRENT_UID && echo $CURRENT_GID
+        - docker-compose -f docker-compose-test.yml exec -T  -e UID=$CURRENT_UID -e GID=$CURRENT_GID php_test sh -c 'usermod app -u $UID && groupmod app -og $GID'
+        - docker-compose -f docker-compose-test.yml exec -T --user=app php_test sh -c 'composer install && composer dump-autoload'
+        - docker-compose -f docker-compose-test.yml exec -T --user=app php_test sh -c 'php artisan migrate:fresh'
+        - docker-compose -f docker-compose-test.yml exec -T --user=app php_test sh -c 'php artisan passport:install'
+        - docker-compose -f docker-compose-test.yml exec -T --user=app php_test sh -c 'composer phpcs'
+        - docker-compose -f docker-compose-test.yml exec -T --user=app php_test sh -c 'php artisan test --parallel'
+        - docker-compose -f docker-compose-test.yml exec -T --user=app php_test sh -c 'php artisan L5-swagger:generate'
+    tags  :
+        - test
+
+
+deploy_dev:
+    stage : deploy_dev
+    only  :
+        - development
+    script:
+        - cd /home/mobin/workspace/refactored/mobin
+        - git pull -f origin development
+    tags  :
+        - dev
+
+
+#deploy_prod:
+#    stage : deploy_prod
+#    only  :
+#        - master
+#    script:
+#        - cd /home/mobin/workspace/refactored/mobin
+#        - git pull origin master
+#    tags  :  
+#        - prod

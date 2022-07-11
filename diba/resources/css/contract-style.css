@@ -1,0 +1,70 @@
+@font-face {
+    font-family: vazir;
+    src: url('/fonts/vazir/Vazir-Black.woff');
+  }
+
+body{
+    font-family:vazir;
+    line-height: 30px;
+    font-size: 15px;
+}
+.container{
+    height: auto;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+}
+.header-title{
+    text-align: center;
+    border-bottom: 1px solid;
+   font-weight: 600;
+}
+.header-title .item1{
+    margin-left: 44px;
+}
+strong{
+    font-size: 19px;
+}
+.title{
+    text-align: right;
+    border-bottom: 1px solid;
+    font-weight: 800;
+    display: inline;
+    float: right;
+    font-size: 22px;
+}
+.font-weight{
+    font-weight:600;
+    font-size: 19px;
+}
+.text-right{
+    text-align: right;
+}
+.text-center{
+    text-align: center;
+}
+.margin-top{
+    margin-top: 70px;
+}
+table, td, th {
+    border: 1px solid black;
+    text-align: center;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  table, td{
+      height: 50px;
+  }
+  .background-th{
+    background: #aba9a9;
+  }
+  .order{
+      margin-right: 3%;
+  }
+  .margin-right{
+      margin-right: 3%;
+  }
